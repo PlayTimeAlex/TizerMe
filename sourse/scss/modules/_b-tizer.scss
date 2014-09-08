@@ -1,0 +1,69 @@
+.b-tizer{
+    $color: #72868b;
+    float: left;
+    min-width: 231px;//important style. Use in JS
+    padding: 0 em(8) em(23);
+    box-sizing: border-box;
+    &__content{
+        border:1px solid #dee1e2;
+        padding: em(20) em(28) em(11);
+        background-color: #fff;
+        position: relative;
+        transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    &.selected &__content{
+        $selcolor: #2ecc71;
+        box-shadow: inset 0 0 0 3px $selcolor, 0 0 2px $selcolor;
+        border-color:$selcolor;
+    }
+    &__header{
+        color: $color;
+        $font-size: 13;
+        font-size: em($font-size);
+        line-height: 1.38;
+    }
+    &__description{
+        color: $color;
+        $font-size: 13;
+        font-size: em($font-size);
+        line-height: 1.38;
+        border-bottom:1px solid #ecf0f1;
+        padding-bottom: em(6);
+        margin-bottom: em(6);
+    }
+    &__img{
+        padding: em(14) 0 em(6);
+        img{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    }
+    &__bar{
+        padding-bottom: em(7);
+    }
+    &__bar-title{
+        display: block;
+        $font-size: 13;
+        font-size: em($font-size);
+        color: $color;
+        padding-bottom: em(3, $font-size);
+    }
+    &__hover{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(211, 215, 220, .8);
+        left: 0;
+        top: 0;
+        display: none;
+        opacity: 0;
+        box-sizing: border-box;
+        padding:  0 em(20);
+    }
+    &__addbtn{
+        margin-bottom: 10px;
+    }
+    
+}

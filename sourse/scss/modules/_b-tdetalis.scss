@@ -1,0 +1,53 @@
+.b-tdetalis{
+    width: 100%;
+    padding: em(20) em(25);
+    border-top: 1px solid #b7c4c8;
+    border-bottom: 1px solid #b7c4c8;
+    background-color: #d7dfe1;
+    clear: both;
+    margin-bottom: em(20);
+    position: relative;
+    box-sizing: border-box;
+    display: none;
+    /*&:after, &:before{
+        content:"";
+        display: block;
+        height: 100%;
+        border-top: 1px solid #b7c4c8;
+        border-bottom: 1px solid #b7c4c8;
+        background-color: #d7dfe1;
+        width: 100px;
+        position: absolute;
+        left: -100px;
+        top: -1px;
+    }
+    &:before{
+        left: auto;
+        right: -100px;
+    }
+    //нужно убирать оверфлоу у контейнера. Пока попробуем так
+    */
+
+    &__image{
+        display: block;
+    }
+    &__item{
+        padding-bottom: em(15);
+        .title, .data{
+            $font-size: 13;
+            font-size: em($font-size);
+            color: #48575b;
+            display: block;
+            text-shadow: 0.5px 0.866px 0px rgba(255, 255, 255, 0.6);
+        }
+        .title{
+            font-weight: 700;
+        }
+    }
+    &__button{
+        margin-right: 15px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}

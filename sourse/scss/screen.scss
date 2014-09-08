@@ -1,0 +1,82 @@
+//@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic,500italic,700italic&subset=latin,cyrillic);
+
+@import "modules/base";
+@import "modules/reset";
+@import "modules/grid";
+
+body{
+    background: url(../images/body-bg.jpg) #548cc2 repeat-x;
+    background-size: auto 100%;
+    min-width: 1012px;
+    padding: em(78) 0 em(42);
+}
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ecf0f1;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    padding: 0 em(45) em(125);
+}
+.tizer-container{
+    overflow: hidden;
+}
+.pr{
+    &-button{
+        text-decoration: none;
+        display: inline-block;
+        $background-color: #fff;
+        background-color: $background-color;
+        $font-size: 13;
+        font-size: em($font-size);
+        border:0;
+        text-align: center;
+        box-sizing: border-box;
+        text-align: center;
+        color: #717880;
+        margin: 0;
+        padding: em(13, $font-size) em(35, $font-size);
+        line-height: 1.5;
+        border-radius: 22px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover{
+            background-color: darken($background-color, 5);
+        }
+        &_block{
+            display: block;
+            width: 100%;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+        &_yellow{
+            $background-color: #ffcd21;
+            background-color: $background-color;
+            &:hover{
+                background-color: darken($background-color, 10);
+            }
+        }
+        &_green{
+            $background-color: #2ecc71;
+            background-color: $background-color;
+            color: #fff;
+            &:hover{
+                background-color: darken($background-color, 10);
+            }
+        }
+    }
+}
+.dtable{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.dcell{
+    display: table-cell;
+    vertical-align: middle;
+}
+@import "modules/b-header";
+@import "modules/b-tizer";
+@import "modules/b-bar";
+@import "modules/b-tdetalis";
+@import "modules/b-footer";
