@@ -1,0 +1,54 @@
+.b-search {
+    padding-left: em(105);
+    position: relative;
+    min-height: 89px;
+    padding-bottom: em(18);
+    &:before{
+        content:"";
+        display: block;
+        width: 89px;
+        height: 89px;
+        background: url(../images/sprite.png) no-repeat 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__wrap {
+        background-color: #fbf6e5;
+        border-radius: 20px;
+        padding: em(7) em(125) em(7) em(10);
+        max-width: 450px;
+        position: relative;
+        box-sizing: border-box;
+        &.focus{
+            box-shadow: 0 0 3px rgba(46, 204, 113, 0.5);
+        }
+    }
+    &__field{
+        $font-size: 13;
+        font-size: em($font-size);
+        color: #72868b;
+        height: em(35, $font-size);
+        box-sizing: border-box;
+        background-color: transparent;
+        border: none;
+        display: block;
+        width: 100%;
+        padding: 0;
+        font-weight: 300;
+        padding-left: em(14, $font-size);
+    }
+    .pr-button{
+        position: absolute;
+        right: em(7);
+        top: em(6);
+        z-index: 10;
+    }
+    &__label{
+        $font-size: 14;
+        font-size: em($font-size);
+        color: #72868b;
+        font-weight: 500;
+        padding-bottom: em(7, $font-size);
+    }
+}

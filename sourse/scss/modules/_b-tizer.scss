@@ -2,7 +2,7 @@
     $color: #72868b;
     float: left;
     min-width: 231px;//important style. Use in JS
-    padding: 0 em(8) em(23);
+    padding: 0 em(4) em(8);
     box-sizing: border-box;
     &__content{
         border:1px solid #dee1e2;
@@ -13,7 +13,7 @@
     }
     &.selected &__content{
         $selcolor: #2ecc71;
-        box-shadow: inset 0 0 0 3px $selcolor, 0 0 2px $selcolor;
+        box-shadow: inset 0 0 0 1px $selcolor, 0 0 2px $selcolor;
         border-color:$selcolor;
     }
     &__header{

@@ -1,0 +1,105 @@
+.b-filter{
+    background: #fff;
+    padding:em(15) 0 em(29);
+    border-bottom:1px solid #eaebec;
+    $color: #72868b;
+    $background-color: #fff;
+    &__item{
+        $font-size: 13;
+        padding: 0 em(19) 0 0;
+        margin-left:em(40);
+        font-weight: 300;
+        display: inline-block;
+        position: relative;
+        .title{
+            cursor: pointer;
+            font-size: em($font-size);
+            color: $color;
+            text-decoration: none;
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+        .arrow{
+            display: block;
+            width: 9px;
+            height: 5px;
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+            top: 50%;
+            background:url(../images/sprite.png) no-repeat -230px 0;
+            margin-top: -2px;
+            cursor: pointer;
+        }
+        .search{
+            font-size: em($font-size);
+            $search-color: #4c85b8;
+            color: $search-color;
+            border-bottom:1px dotted $search-color;
+            cursor: pointer;
+            text-decoration: none;
+            &:hover{
+                border-bottom: 0;
+            }
+        }
+        .value{
+            display: inline-block;
+            text-decoration: none;
+            color: $color;
+            $background-color: #f2f4f5;
+            background-color: $background-color;
+            font-size: em($font-size);
+            padding: em(6, $font-size) em(30, $font-size) em(6, $font-size) em(15, $font-size);
+            border-radius: 2px;
+            margin: 0 0 0 em(10, $font-size);
+            position: relative;
+            vertical-align: middle;
+            transition: background-color .3s;
+            &:hover{
+                background-color: darken($background-color, 5);
+                &:after{
+                    opacity: 1;
+                }
+            }
+            &:after{
+                content:"";
+                display: block;
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                right: 12px;
+                top: 50%;
+                margin-top: -4px;
+                opacity: 0;
+                transition: opacity .3s;
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMBJREFUeNqkU9ENhCAMBSdxBG8H2AMmO/bgywl0A92Ea72SlFrxcjZpKuG9+igPW0oxT2LgC+/9dEcAzKg2gI0AZYH67pARs1E9wuIR6M8Lw6acc1TIvPkLMOuhAD+QxDYDV6KQE3G+ChgQQYEDIWeFHJsjCKmyiekdbZAIAqRfyGoDivkvH1wMTB3slZFO0+7djmak07SVmTRNqpHQntuNkeTtNEbaocTetIWSWI1kUEFN59zE11pKjH36nD8CDACsIpgfdd3pqwAAAABJRU5ErkJggg==) no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    &__dropdown{
+        position: absolute;
+        top: 100%;
+        width:250px;
+        background-color: $background-color;
+        z-index: 10;
+        padding-bottom: em(10);
+        box-shadow: 0 2px 1px rgba(0,0,0,.5);
+        cursor: pointer;
+        left: 0;
+        display: none;
+        opacity: 0;
+    }
+    &__dropdown-item{
+        list-style: none;
+        padding: em(5) em(10);
+        $font-size: 13;
+        font-size: em($font-size);
+        transition: background-color .3s;
+        color: $color;
+        &:hover{
+            background-color: darken($background-color, 10);
+        }
+    }
+}

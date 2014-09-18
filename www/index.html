@@ -1,195 +1,307 @@
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html>
-    <head>
-        <title>Index</title>
-        <meta charset="UTF-8">
-        <!--<meta name="viewport" content="width=device-width">-->
-        <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
-        <link rel="stylesheet" href="css/style.min.css" media="all"/>
-        <script src="js/all.min.js"></script>
-        <!--[if lte IE 8 ]><script type="text/javascript">window.location.href="ie8min/index.html";</script><![endif]-->
-    </head>
-    <body>
-            <header class="b-header">
-            
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width">-->
+    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
+    <link rel="stylesheet" href="css/style.min.css" media="all"/>
+    <script src="js/all.min.js"></script>
+    <!--[if lte IE 8 ]><script type="text/javascript">window.location.href="ie8min/index.html";</script><![endif]-->
+</head>
+<body>
+    <div class="wrap">
+        <header class="b-header">
+            <div class="container">
+                <div class="row">
+                    <div class="span5">
+                        <div class="b-header__logo">
+                            <a href="index.html"><img src="images/logo.png" alt="TizerMe" width="53" height="46"/></a>
+                        </div>
+                        <nav class="b-nav">
+                            <a href="#">Парсер</a><a href="#">Заливщик</a><a href="#">Планировщик</a><a href="#">Аккаунты</a>
+                        </nav>
+                    </div>
+                    <div class="span5 align-right">
+                        <div class="b-user">
+                            <div class="b-user__item"><a class="link" href="#toprofail(maybe)">abracadabra@adhelper.pro</a></div>
+                            <div class="b-user__item">Ваш балланс:  <span class="balance">108 $</span></div>
+                            <div class="b-user__item"><a href="#" class="pr-button pr-button_gray pr-button_small">Пополнить</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </header>
-        <div class="wrap">
+            <div class="search-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="span5">
+                            <div class="b-search">
+                                <form action="/">
+                                    <div class="b-search__label">Введите ключевое слово или домен</div>
+                                    <div class="b-search__wrap"><input class="b-search__field" type="text" placeholder="Ключевое слово или домен: 'Nokia, iPhone'"/>
+                                        <button class="pr-button pr-button_yellow pr-button_small" type="submit">Найти</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="span5">
+                            <div class="b-umenu">
+                                <a class="b-umenu__link b-umenu__link_profile" href="#" title="Профиль">Профиль</a><a class="b-umenu__link b-umenu__link_settings" href="#" title="Настройки">Настройки</a><a class="b-umenu__link b-umenu__link_exit" href="#" title="Выход">Выход</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-filter">
+                <div class="b-filter__header">
+                    <div class="container">
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Период</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Тизерные сети</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Страна</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Тип трафика</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Время жизни</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item"><a class="search js-open_filter" href="#">Расширенный поиск</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-fexpand js-expanded_filter">
+                <div class="container">
+                    <form id="expanded-filter" action="/">
+                        <div class="row">
+                            <div class="span2">
+                                <div class="b-fexpand__list">
+    <div class="b-fexpand__l-header">
+        <div class="row">
+            <div class="span5">
+                Период
+            </div>
+            <div class="span5 align-right">
+                <button type="button" class="b-fexpand__l-unselect">снять все</button>
+            </div>
+        </div>
+    </div>
+    <div class="b-fexpand__l-wrap">
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+    </div>
+</div>
+                            </div>
+                            <div class="span2">
+                                <div class="b-fexpand__list">
+    <div class="b-fexpand__l-header">
+        <div class="row">
+            <div class="span5">
+                Период
+            </div>
+            <div class="span5 align-right">
+                <button type="button" class="b-fexpand__l-unselect">снять все</button>
+            </div>
+        </div>
+    </div>
+    <div class="b-fexpand__l-wrap">
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+    </div>
+</div>
+                            </div>
+                            <div class="span2">
+                                <div class="b-fexpand__list">
+    <div class="b-fexpand__l-header">
+        <div class="row">
+            <div class="span5">
+                Период
+            </div>
+            <div class="span5 align-right">
+                <button type="button" class="b-fexpand__l-unselect">снять все</button>
+            </div>
+        </div>
+    </div>
+    <div class="b-fexpand__l-wrap">
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+    </div>
+</div>
+                            </div>
+                            <div class="span2">
+                                <div class="b-fexpand__list">
+    <div class="b-fexpand__l-header">
+        <div class="row">
+            <div class="span5">
+                Период
+            </div>
+            <div class="span5 align-right">
+                <button type="button" class="b-fexpand__l-unselect">снять все</button>
+            </div>
+        </div>
+    </div>
+    <div class="b-fexpand__l-wrap">
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+    </div>
+</div>
+                            </div>
+                            <div class="span2">
+                                <div class="b-fexpand__list">
+    <div class="b-fexpand__l-header">
+        <div class="row">
+            <div class="span5">
+                Период
+            </div>
+            <div class="span5 align-right">
+                <button type="button" class="b-fexpand__l-unselect">снять все</button>
+            </div>
+        </div>
+    </div>
+    <div class="b-fexpand__l-wrap">
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Advertlink.ru</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>MyBigAdNetwork.com</label>
+        <label><input class="b-fexpand__checkbox" type="checkbox"/>Adnow.ru</label>
+    </div>
+</div>
+                            </div>
+                        </div>
+                        <div class="b-fexpand__bottom">
+                            <div class="row">
+                                <div class="span5"><button type="reset" class="pr-button pr-button_gray pr-button_small">Сбросить все</button></div>
+                                <div class="span5 align-right"><button type="submit" class="pr-button pr-button_green pr-button_small">Отфильтровать</button></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="container">
                 <div id="tizer-container" class="tizer-container">
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
                     <div class="b-tdetalis">
                         <div class="row">
                             <div class="span9">
@@ -245,446 +357,48 @@
                             </div>
                         </div>
                     </div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
+                </div>
+                <div id="tizer-preloader" class="tizer-preloader">
+                    <img src="images/loader.gif" alt=""/>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                    <div class="b-tizer">
-    <div class="b-tizer__content">
-        <div class="b-tizer__header">
-            Качественная обувь от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__img">
-            <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
-        </div>
-        <div class="b-tizer__description">
-            Распродажа качественной обуви от производителя Clark Shoes!
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Время жизни:</span>
-            <div class="b-bar"><span class="b-bar__progress" style="width:75%;"></span></div>
-        </div>
-        <div class="b-tizer__bar">
-            <span class="b-tizer__bar-title">Частота повторения:</span>
-            <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:50%;"></span></div>
-        </div>
-        <div class="b-tizer__hover">
-            <div class="dtable">
-                <div class="dcell">
-                    <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                    <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                </div>
-            </div>
+
         </div>
             <footer class="b-footer">
             
         </footer>
+    <script id="tizerTemplate" type="text/x-jsrender">
+    {{for}}
+        <div class="b-tizer" id="{{>id}}">
+            <div class="b-tizer__content">
+                <div class="b-tizer__header">
+                    {{>name}}
+                </div>
+                <div class="b-tizer__img">
+                    <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
+                </div>
+                <div class="b-tizer__description">
+                    Распродажа качественной обуви от производителя Clark Shoes!
+                </div>
+                <div class="b-tizer__bar">
+                    <span class="b-tizer__bar-title">Время жизни:</span>
+                    <div class="b-bar"><span class="b-bar__progress" style="width:{{>time}}%;"></span></div>
+                </div>
+                <div class="b-tizer__bar">
+                    <span class="b-tizer__bar-title">Частота повторения:</span>
+                    <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:{{>frequency}}%;"></span></div>
+                </div>
+                <div class="b-tizer__hover">
+                    <div class="dtable">
+                        <div class="dcell">
+                            <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
+                            <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/for}}
+    </script>
     </body>
 </html>

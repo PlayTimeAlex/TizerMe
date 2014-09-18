@@ -1,14 +1,16 @@
-//@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic,500italic,700italic&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic,500italic,700italic&subset=latin,cyrillic);
 
 @import "modules/base";
 @import "modules/reset";
 @import "modules/grid";
 
 body{
-    background: url(../images/body-bg.jpg) #548cc2 repeat-x;
+    background: url(../images/body-bg.jpg) #aac1d7 repeat-x;
     background-size: auto 100%;
     min-width: 1012px;
     padding: em(78) 0 em(42);
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
 }
 .wrap {
     width: 90%;
@@ -16,10 +18,22 @@ body{
     background-color: #ecf0f1;
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    padding: 0 em(45) em(125);
+}
+.container{
+    padding: 0 em(45) 0;
 }
 .tizer-container{
     overflow: hidden;
+    padding: em(20) 0;
+}
+.search-container{
+    padding: em(20) 0 0 0;
+    background-color: #fff;
+}
+.tizer-preloader{
+    text-align: center;
+    padding: em(20) 0 em(60);
+    transition: opacity 0.3s;
 }
 .pr{
     &-button{
@@ -28,7 +42,7 @@ body{
         $background-color: #fff;
         background-color: $background-color;
         $font-size: 13;
-        font-size: em($font-size);
+        font-size: $font-size*1px;
         border:0;
         text-align: center;
         box-sizing: border-box;
@@ -64,7 +78,21 @@ body{
                 background-color: darken($background-color, 10);
             }
         }
+        &_gray{
+            $background-color: #cdd1d7;
+            background-color: $background-color;
+            color: #fff;
+            &:hover{
+                background-color: darken($background-color, 10);
+            }
+        }
+        &_small{
+            padding: em(8, $font-size) em(28, $font-size);
+        }
     }
+}
+.align-right{
+    text-align: right;
 }
 .dtable{
     display: table;
@@ -75,7 +103,31 @@ body{
     display: table-cell;
     vertical-align: middle;
 }
+
+@media (max-width: 1400px){
+    .wrap {
+        width: 95%;
+    }
+    .container{
+        padding: 0 em(30) 0;
+    }
+}
+@media (max-width: 1100px){
+    .wrap {
+        width: 100%;
+    }
+    .container{
+        padding: 0 em(15) 0;
+    }
+}
 @import "modules/b-header";
+@import "modules/b-nav";
+@import "modules/b-user";
+@import "modules/b-fexpand";
+@import "modules/b-search";
+@import "modules/b-umenu";
+@import "modules/b-filter";
+
 @import "modules/b-tizer";
 @import "modules/b-bar";
 @import "modules/b-tdetalis";

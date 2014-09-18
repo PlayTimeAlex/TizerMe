@@ -1,25 +1,148 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Index</title>
-        <meta charset="UTF-8">
-        <!--<meta name="viewport" content="width=device-width">-->
-        <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
-        <link rel="stylesheet" href="css/style.min.css" media="all"/>
-        <script src="js/all.min.js"></script>
-        <!--[if lte IE 8 ]><script type="text/javascript">window.location.href="ie8min/index.html";</script><![endif]-->
-    </head>
-    <body>
-    @@include('blocks/_b-header.html')
-        <div class="wrap">
+            @@include('blocks/_b-header.html')
+            <div class="search-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="span5">
+                            <div class="b-search">
+                                <form action="/">
+                                    <div class="b-search__label">Введите ключевое слово или домен</div>
+                                    <div class="b-search__wrap"><input class="b-search__field" type="text" placeholder="Ключевое слово или домен: 'Nokia, iPhone'"/>
+                                        <button class="pr-button pr-button_yellow pr-button_small" type="submit">Найти</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="span5">
+                            <div class="b-umenu">
+                                <a class="b-umenu__link b-umenu__link_profile" href="#" title="Профиль">Профиль</a><a class="b-umenu__link b-umenu__link_settings" href="#" title="Настройки">Настройки</a><a class="b-umenu__link b-umenu__link_exit" href="#" title="Выход">Выход</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-filter">
+                <div class="b-filter__header">
+                    <div class="container">
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Период</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Тизерные сети</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Страна</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Тип трафика</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item">
+                            <a class="title" href="#">Время жизни</a><a class="arrow" href="#"></a>
+                            <div class="b-filter__dropdown">
+                                <ul>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                    <li class="b-filter__dropdown-item" data-val="value">Элемент фильтра</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-filter__item"><a class="search js-open_filter" href="#">Расширенный поиск</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-fexpand js-expanded_filter">
+                <div class="container">
+                    <form id="expanded-filter" action="/">
+                        <div class="row">
+                            <div class="span2">
+                                @@include('blocks/_expand-list.html')
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_expand-list.html')
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_expand-list.html')
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_expand-list.html')
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_expand-list.html')
+                            </div>
+                        </div>
+                        <div class="b-fexpand__bottom">
+                            <div class="row">
+                                <div class="span5"><button type="reset" class="pr-button pr-button_gray pr-button_small">Сбросить все</button></div>
+                                <div class="span5 align-right"><button type="submit" class="pr-button pr-button_green pr-button_small">Отфильтровать</button></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="container">
                 <div id="tizer-container" class="tizer-container">
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
                     <div class="b-tdetalis">
                         <div class="row">
                             <div class="span9">
@@ -75,24 +198,46 @@
                             </div>
                         </div>
                     </div>
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
-                    @@include('blocks/_b-tizer.html')
+                </div>
+                <div id="tizer-preloader" class="tizer-preloader">
+                    <img src="images/loader.gif" alt=""/>
+                </div>
+            </div>
+
+        </div>
+    @@include('blocks/_b-footer.html')
+    <script id="tizerTemplate" type="text/x-jsrender">
+    {{for}}
+        <div class="b-tizer" id="{{>id}}">
+            <div class="b-tizer__content">
+                <div class="b-tizer__header">
+                    {{>name}}
+                </div>
+                <div class="b-tizer__img">
+                    <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
+                </div>
+                <div class="b-tizer__description">
+                    Распродажа качественной обуви от производителя Clark Shoes!
+                </div>
+                <div class="b-tizer__bar">
+                    <span class="b-tizer__bar-title">Время жизни:</span>
+                    <div class="b-bar"><span class="b-bar__progress" style="width:{{>time}}%;"></span></div>
+                </div>
+                <div class="b-tizer__bar">
+                    <span class="b-tizer__bar-title">Частота повторения:</span>
+                    <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:{{>frequency}}%;"></span></div>
+                </div>
+                <div class="b-tizer__hover">
+                    <div class="dtable">
+                        <div class="dcell">
+                            <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
+                            <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    @@include('blocks/_b-footer.html')
+    {{/for}}
+    </script>
     </body>
 </html>

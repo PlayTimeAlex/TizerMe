@@ -1,0 +1,9 @@
+.b-header{
+    background-color: #fbfcfc;
+    border-bottom: 1px solid #e5e5e5;
+    padding: em(21) 0;
+    &__logo{
+        float: left;
+        margin-right: em(50);
+    }
+}

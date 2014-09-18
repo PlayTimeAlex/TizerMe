@@ -1,0 +1,30 @@
+$font-size: 15;
+.b-nav{
+    padding: em(15) 0;
+    > a{
+        font-size: em($font-size);
+        color: #72868b;
+        margin-left: em(40, $font-size);
+        text-decoration: none;
+        &:first-child{
+            margin-left: 0;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+@media (max-width: 1400px){
+    .b-nav{
+        > a{
+            margin-left: em(20, $font-size);
+        }
+    }
+}
+@media (max-width: 1100px){
+    .b-nav{
+        > a{
+            margin-left: em(10, $font-size);
+        }
+    }
+}
