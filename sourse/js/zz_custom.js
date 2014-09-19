@@ -5,20 +5,19 @@
 *
 * */
 
-
-var $tizerContainer,
-    tizerContainerW,
-    tizerCount,
-    tizerWidth,
-    $tizers,
-    tizers = {},
-    defaultTizerLink = 'tizers.php',
-    addtext = "Добавить в проект",
-    deltext = "Убрать из проекта",
-    inProcess = false;
-
 (function($) {
     $(document).ready(function(){
+        var $tizerContainer,
+            tizerContainerW,
+            tizerCount,
+            tizerWidth,
+            $tizers,
+            tizers = {},
+            defaultTizerLink = 'tizers.php',
+            addtext = "Добавить в проект",
+            deltext = "Убрать из проекта",
+            inProcess = false;
+
 
         $tizerContainer = $('#tizer-container');
         tizerContainerW = $tizerContainer.outerWidth(true);
@@ -141,7 +140,7 @@ var $tizerContainer,
             e.preventDefault();
         });
 
-
+/* -------------------------------Этот участок кода требует замены/переработки. Его можно не трогать пока-----------------------------------*/
           /*
          * Добавление тизера в проект
          *
@@ -233,6 +232,8 @@ var $tizerContainer,
 
             return false;
         });
+
+/* ------------------------------------------------------------------*/
 
         /**
          * Устанавливает ширину тизеров в зависимости от ширины контейнера

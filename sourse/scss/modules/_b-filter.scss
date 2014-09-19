@@ -1,13 +1,13 @@
 .b-filter{
     background: #fff;
-    padding:em(15) 0 em(29);
+    padding:em(15) 0 em(20);
     border-bottom:1px solid #eaebec;
     $color: #72868b;
     $background-color: #fff;
     &__item{
         $font-size: 13;
         padding: 0 em(19) 0 0;
-        margin-left:em(40);
+        margin:0 em(40) em(9) 0;
         font-weight: 300;
         display: inline-block;
         position: relative;
@@ -17,8 +17,8 @@
             color: $color;
             text-decoration: none;
         }
-        &:first-child{
-            margin-left: 0;
+        &:last-child{
+           right-left: 0;
         }
         .arrow{
             display: block;
