@@ -4,6 +4,7 @@
     min-width: 231px;//important style. Use in JS
     padding: 0 em(4) em(8);
     box-sizing: border-box;
+    cursor: pointer;
     &__content{
         border:1px solid #dee1e2;
         padding: em(20) em(28) em(11);

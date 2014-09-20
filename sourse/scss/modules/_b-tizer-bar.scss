@@ -1,0 +1,33 @@
+.b-tizer-bar{
+    position: fixed;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+    bottom: - em(50);
+    opacity: 0;
+    z-index: 50;
+    $transition-duration: 300ms;
+    transition: opacity $transition-duration, bottom $transition-duration;
+    transition-duration: $transition-duration;//Нужно для джс
+    &.open{
+        bottom: em(10);
+        opacity: 1;
+    }
+    &__container{
+        box-sizing: border-box;
+        padding: em(8) em(42);
+        background-color: #fff;
+        border-radius: 50px;
+        box-shadow: 0 0 5px rgba(0,0,0,.5);
+    }
+    p{
+        $font-size: 16;
+        font-size: em($font-size);
+        font-weight: 300;
+        color: #72868B;
+        padding: em(12, $font-size) 0;
+        .total-tizers{
+            color: #095F74;
+        }
+    }
+}

@@ -89,6 +89,9 @@ body{
         &_small{
             padding: em(8, $font-size) em(28, $font-size);
         }
+        &_gray-bd{
+            border: 2px solid #c2d0d3;
+        }
     }
 }
 .align-right{
@@ -127,6 +130,8 @@ body{
 @import "modules/b-search";
 @import "modules/b-umenu";
 @import "modules/b-filter";
+@import "modules/b-tizer-bar";
+
 
 @import "modules/b-tizer";
 @import "modules/b-bar";

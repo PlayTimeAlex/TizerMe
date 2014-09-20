@@ -7,22 +7,21 @@
 
 (function($) {
     $(document).ready(function(){
-        var $tizerContainer,
-            tizerContainerW,
+        var $tizerContainer = $('#tizer-container'),
+            tizerContainerW = $tizerContainer.outerWidth(true),
             tizerCount,
             tizerWidth,
             $tizers,
-            tizers = {},
+            tizersAll = {},
             defaultTizerLink = 'tizers.php',
             addtext = "Добавить в проект",
             deltext = "Убрать из проекта",
-            inProcess = false;
+            inProcess = false,
+            $tizerPreloader = $('#tizer-preloader'),
+            $tizerTemplate = $('#tizerTemplate'),
+            $tizerMoreTemplate = $('#tizerMoreTemplate'),
+            $tizerBar = $('.b-tizer-bar');
 
-
-        $tizerContainer = $('#tizer-container');
-        tizerContainerW = $tizerContainer.outerWidth(true);
-        $tizerPreloader = $('#tizer-preloader');
-        $tizerTemplate = $('#tizerTemplate');
         getTizers(addTizers);
 
         /*
@@ -140,44 +139,30 @@
             e.preventDefault();
         });
 
-/* -------------------------------Этот участок кода требует замены/переработки. Его можно не трогать пока-----------------------------------*/
-          /*
-         * Добавление тизера в проект
-         *
-         * требует доработки. Нужно передавать потом масив
-         * тизеров(когда мы выделяем при помощи зажатого ctrl
-         * */
-        $('.b-tizer').on('click', function(e){
+        /*
+        * Выделение тизера при зажатом ctrl/comand
+        * Показ подробной информации о тизере
+        * */
+        $('body').on('click', ".b-tizer", function(e){
             if(e.ctrlKey === true || e.metaKey === true) {
                 var $tizer = $(this);
-                if($tizer.hasClass("selected")){
-                    $tizer.removeClass('selected');
-                    $('.b-tizer__addbtn', this).html(addtext);
-                } else {
-                    $tizer.addClass('selected');
-                    $('.b-tizer__addbtn', this).html(deltext);
-                }
-                return false;
+                $tizer.hasClass("selected") ?  $tizer.removeClass('selected') : $tizer.addClass('selected');
+                showCountTizersBar();
+            } else {
+                showDetalisBlock($(this));
             }
+            return false;
         });
 
-        /*$('.b-tizer').on({
-            mouseenter: function (e) {
-                if(e.ctrlKey === false && e.metaKey === false) {
-                    $('.b-tizer__hover', this).css('display', 'block').stop().animate({
-                        opacity: 1
-                    }, 300);
-                }
-
-            },
-            mouseleave: function () {
-                $('.b-tizer__hover', this).stop().animate({
-                    opacity:0
-                }, 300, function(){
-                    $(this).css('display', 'none')
-                });
-            }
-        });*/
+        /*
+        * Удаление блок "Подробнее" при ресайзе
+        * */
+        $(window).resize(function(){
+            $('.b-tdetalis').stop().slideUp('fast', function(){
+                $(this).remove();
+            });
+            setTizerWidth();
+        });
 
         /*
          * Добавление тизера в проект
@@ -185,8 +170,9 @@
          * требует доработки. Нужно передавать потом масив
          * тизеров(когда мы выделяем при помощи зажатого ctrl
          * */
-        $('.b-tizer__addbtn').on('click', function(){
-            var $tizer = $(this).closest('.b-tizer');
+        $('body').on('click', '.js-add-to-projekt', function(){
+            var tizerId = $(this).closest('.b-tdetalis').data('id'),
+                $tizer = $("#"+tizerId);
             if($tizer.hasClass("selected")){
                 $tizer.removeClass('selected');
                 $(this).html(addtext);
@@ -194,46 +180,19 @@
                 $tizer.addClass('selected');
                 $(this).html(deltext);
             }
+            showCountTizersBar();
             return false;
         });
 
-
-
-        $(window).resize(function(){
-            //remove details when resize window
-            $('.b-tdetalis').stop().slideUp('fast', function(){
+        /*
+        * Закрывает подробное описание при клике по кнопке
+        * */
+        $('body').on('click', '.js-close-detalis', function(){
+            $(this).closest('.b-tdetalis').stop().slideUp('fast', function(){
                 $(this).remove();
             });
-
-            setTizerWidth();
-        });
-
-        //temporary
-        var detalis = $('.b-tdetalis');
-        $('.b-tdetalis').remove();
-        $('.b-tizer__detalisbtn').on('click', function(){
-            //$('.b-tdetalis').stop().slideDown('fast');
-            var parent = $(this);
-            if($(this).hasClass('open')){
-                $('.b-tdetalis').stop().slideUp('fast', function(){
-                    $(this).remove();
-                });
-                $(this).removeClass('open');
-            } else {
-                $('.b-tdetalis').stop().slideUp('fast', function(){
-                    $(this).remove();
-                });
-                var afterEl = ".b-tizer:eq("+(tizerCount-1)+")"; //нужно определять текущий ряд. В данный момент коректно работает только в первом ряду.
-
-                detalis.insertAfter(afterEl).stop().slideDown('fast');
-                parent.addClass('open');
-            }
-
-
             return false;
         });
-
-/* ------------------------------------------------------------------*/
 
         /**
          * Устанавливает ширину тизеров в зависимости от ширины контейнера
@@ -289,9 +248,7 @@
                 },
                 success: function(data){
                     for(var key in data) {
-                        var obj = {};
-                        obj[key] = data[key];
-                        tizers[key] = data[key];
+                        tizersAll[key] = data[key];
                         dataArr.push(data[key]);
                     }
                     done(dataArr);
@@ -314,12 +271,90 @@
          * @param {boolean} очистить список тизеров или добавить в конец
          */
         function addTizers(tizers, clean){
-            $tizerContainer.append($tizerTemplate.render(tizers));​
-
+            $tizerContainer.append($tizerTemplate.render(tizers));
             $tizers = $('.b-tizer');
             setTizerWidth();
         }
-    });
+
+        /*
+        * Функция склонения целых числительных
+        *
+        * @param {number} число
+        * @param {boolean} массив слов для склонения
+        *
+        * @return {string}
+        * */
+        function declOfNum(number, titles)
+        {
+            cases = [2, 0, 1, 1, 1, 2];
+            return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+        }
+
+        /*
+         * Показывае/скрывает полоску с количеством выбраных тизеров
+         * */
+        function showCountTizersBar() {
+            var total = $('.b-tizer.selected').length;
+            var tizerBar = $('.b-tizer-bar');
+            if (total > 0){
+                if(!tizerBar.hasClass('open')) tizerBar.addClass('open');
+                $('.total-tizers').html(total+" "+declOfNum(total, ["тизер", "тизера", "тизеров"]));
+            } else {
+                tizerBar.removeClass('open');
+            }
+
+            var detalisBlock = $('.b-tdetalis');
+            if(detalisBlock.length){
+                setTimeout (function(){
+                    detalisBlockPositioning(detalisBlock);
+                }, parseFloat(detalisBlock.css("transition-duration"))*1000+500);
+            }
+        }
+
+        /*
+         * Показывает подробную информацию о тизере
+         *
+         * @param {object} тизер по которуму кликнули
+         * */
+        function showDetalisBlock(tizer) {
+            var id = tizer.attr("id");
+            var detalis = $('.b-tdetalis');
+            var insertAfterIndex = Math.ceil((tizer.index()+1)/tizerCount)*tizerCount-1;
+            var afterEl = ".b-tizer:eq("+insertAfterIndex+")";
+            var content = [tizersAll[id]];
+            console.log(content);
+            if(detalis.length){
+                detalis.stop().slideUp('fast', function(){
+                    $(this).remove();
+                    $($tizerMoreTemplate.render(content)).insertAfter(afterEl).stop().slideDown('fast', function(){
+                        detalisBlockPositioning($(this));
+                    });
+                });
+            } else {
+                $($tizerMoreTemplate.render(content)).insertAfter(afterEl).stop().slideDown('fast', function(){
+                    detalisBlockPositioning($(this));
+                });
+            }
+        }
+
+        /*
+         * Позиционирует страницу относительно блока "подробнее"
+         *
+         * @param {object} блок "подробнее"
+         * */
+        function detalisBlockPositioning(block){
+            var position = block.position(),
+                winHeight,
+                blockHeight = block.outerHeight(true),
+                bottomPosition = position.top + blockHeight;
+            winHeight = $tizerBar.hasClass('open') ? $(window).height() - $tizerBar.outerHeight(true)-parseInt($tizerBar.css('bottom')) : $(window).height();
+            if(bottomPosition > winHeight){
+                $('html,body').animate({
+                    scrollTop: bottomPosition - winHeight
+                }, 500);
+            }
+        }
+     });
 
     $(window).load(function() {
          

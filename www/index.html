@@ -6,7 +6,7 @@
     <!--<meta name="viewport" content="width=device-width">-->
     <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
     <link rel="stylesheet" href="css/style.min.css" media="all"/>
-    <script src="js/all.min.js"></script>
+    <script src="js/all.js"></script>
     <!--[if lte IE 8 ]><script type="text/javascript">window.location.href="ie8min/index.html";</script><![endif]-->
 </head>
 <body>
@@ -301,65 +301,22 @@
                 </div>
             </div>
             <div class="container">
-                <div id="tizer-container" class="tizer-container">
-                    <div class="b-tdetalis">
-                        <div class="row">
-                            <div class="span9">
-                                <div class="row">
-                                    <div class="span4">
-                                        <div class="b-tdetalis__item">
-                                            <span class="title">Последнее появление:</span>
-                                            <span class="data">2014-09-01</span>
-                                        </div>
-                                    </div>
-                                    <div class="span4">
-                                        <div class="b-tdetalis__item">
-                                            <span class="title">Страны:</span>
-                                            <span class="data">Россия,Украина</span>
-                                        </div>
-                                    </div>
-                                    <div class="span4">
-                                        <div class="b-tdetalis__item">
-                                            <span class="title">Время жизни:</span>
-                                            <span class="data">-</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="span4">
-                                        <div class="b-tdetalis__item">
-                                            <span class="title">Первое появление:</span>
-                                            <span class="data">2014-09-01</span>
-                                        </div>
-                                    </div>
-                                    <div class="span4">
-                                        <div class="b-tdetalis__item">
-                                            <span class="title">Города:</span>
-                                            <span class="data">Москва,Питер,Харьков,Киев</span>
-                                        </div>
-                                    </div>
-                                    <div class="span4">
-                                        <div class="b-tdetalis__item">
-                                            <span class="title">Размер:</span>
-                                            <span class="data">200x200</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="span12">
-                                        <button class="pr-button pr-button_green b-tdetalis__button">Добавить в проект</button>
-                                        <button class="pr-button b-tdetalis__button">Закрыть описание</button>
-                                    </div>
-                                </div>
+                <div id="tizer-container" class="tizer-container"></div>
+                <div id="tizer-preloader" class="tizer-preloader">
+                    <img src="images/loader.gif" alt=""/>
+                </div>
+                <div class="b-tizer-bar">
+                    <div class="container">
+                        <div class="row b-tizer-bar__container" >
+                            <div class="span5">
+                                <p>Выбрано : <span class="total-tizers"></span></p>
                             </div>
-                            <div class="span3">
-                                <img class="b-tdetalis__image" src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
+                            <div class="span5 align-right">
+                                <button class="pr-button pr-button_green">Создать проект</button>
+                                <button class="pr-button pr-button_gray-bd">Еще</button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="tizer-preloader" class="tizer-preloader">
-                    <img src="images/loader.gif" alt=""/>
                 </div>
             </div>
 
@@ -375,10 +332,10 @@
                     {{>name}}
                 </div>
                 <div class="b-tizer__img">
-                    <img src="images/content/tizer-image.jpg" alt="Качественная обувь от производителя Clark Shoes!"/>
+                    <img src="{{>image}}" alt="{{>name}}"/>
                 </div>
                 <div class="b-tizer__description">
-                    Распродажа качественной обуви от производителя Clark Shoes!
+                    {{>description}}
                 </div>
                 <div class="b-tizer__bar">
                     <span class="b-tizer__bar-title">Время жизни:</span>
@@ -388,17 +345,67 @@
                     <span class="b-tizer__bar-title">Частота повторения:</span>
                     <div class="b-bar b-bar_yellow"><span class="b-bar__progress" style="width:{{>frequency}}%;"></span></div>
                 </div>
-                <div class="b-tizer__hover">
-                    <div class="dtable">
-                        <div class="dcell">
-                            <button class="pr-button pr-button_block pr-button_yellow b-tizer__addbtn">Добавить в проект</button>
-                            <button class="pr-button pr-button_block b-tizer__detalisbtn">Подробнее</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     {{/for}}
+    </script>
+    <script id="tizerMoreTemplate" type="text/x-jsrender">
+        <div class="b-tdetalis" data-id="{{>id}}">
+            <div class="row">
+                <div class="span7">
+                    <div class="row">
+                        <div class="span3">
+                            <div class="b-tdetalis__item">
+                                <span class="title">Последнее появление:</span>
+                                <span class="data">2014-09-01</span>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="b-tdetalis__item">
+                                <span class="title">Страны:</span>
+                                <span class="data">Россия,Украина</span>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="b-tdetalis__item">
+                                <span class="title">Время жизни:</span>
+                                <span class="data">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3">
+                            <div class="b-tdetalis__item">
+                                <span class="title">Первое появление:</span>
+                                <span class="data">2014-09-01</span>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="b-tdetalis__item">
+                                <span class="title">Города:</span>
+                                <span class="data">Москва,Питер,Харьков,Киев</span>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="b-tdetalis__item">
+                                <span class="title">Размер:</span>
+                                <span class="data">200x200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">
+                            <button class="pr-button pr-button_green b-tdetalis__button js-add-to-projekt">Добавить в проект</button>
+                            <button class="pr-button b-tdetalis__button js-close-detalis">Закрыть описание</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    <img class="b-tdetalis__image" src="{{>image}}" alt="{{>name}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
     </script>
     </body>
 </html>
