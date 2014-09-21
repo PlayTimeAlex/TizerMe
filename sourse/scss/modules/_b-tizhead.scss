@@ -1,0 +1,33 @@
+.b-tizhead{
+    padding-top: em(15);
+    &__choose{
+        color: #72868B;
+        $font-size: 23;
+        font-size: em($font-size);
+        padding: 1px 0 1px 41px;
+        position: relative;
+        font-weight: 300;
+        &:before{
+            content:"";
+            display: block;
+            width: 18px;
+            height: 36px;
+            background: url(../images/sprite.png) no-repeat -239px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__find{
+        $font-size: 15;
+        font-size: em($font-size);
+        color: #72868B;
+        font-weight: 300;
+        padding: em(7, $font-size) 0;
+        display: inline-block;
+        .num{
+            color: #000;
+            font-weight: 500;
+        }
+    }
+}

@@ -25,6 +25,13 @@
         getTizers(addTizers);
 
         /*
+        * Для закрытия чего либо при клика за его пределами
+        * */
+        $('body').on('click', function() {
+            closeSelected();
+        });
+
+        /*
         * Снимает выделение со всего списка в фильтре
         * */
         $('.b-fexpand__l-unselect').click(function(){
@@ -59,6 +66,7 @@
         * Раскрытие расшириного фильтра
         * */
         $('.js-open_filter').click(function(){
+            closeSelected();
             var filter = $('.js-expanded_filter');
             if(filter.hasClass('open')){
                 filter.slideUp('fast', function(){
@@ -73,12 +81,13 @@
         });
 
         /*
-        *Открытие списка быстрого фильтра
+        * Открытие списка быстрого фильтра
         * */
-        $('.b-filter__item').click(function(){
-            var dropdown = $('.b-filter__dropdown', this);
-            if(dropdown.hasClass('open')){
-                dropdown.stop().animate({
+        $('.title', '.b-filter__item').click(function(){
+            var  $parent = $(this).parent();
+            var $dropdown = $('.b-filter__dropdown', $parent);
+            if($dropdown.hasClass('open')){
+                $dropdown.stop().animate({
                     opacity:0
                 }, 300, function(){
                     $(this).removeClass('open').css("display", "none");
@@ -89,7 +98,7 @@
                 }, 100, function(){
                     $(this).removeClass('open').css("display", "none");
 
-                    dropdown.css("display", "block").stop().animate({
+                    $dropdown.css("display", "block").stop().animate({
                         opacity:1
                     }, 300, function(){
                         $(this).addClass('open');
@@ -100,6 +109,47 @@
         });
 
         /*
+         * Открытие списка быстрого фильтра
+         * */
+        $('body').on('click', '.b-filter__item .value', function(){
+            $(this).remove();
+
+            /*
+            * @todo обновление значений формы должно быть
+            * */
+            return false;
+        });
+
+        /*
+         *Открытие списка быстрого (при наведении на стрелку)
+         * */
+         var filterDropTimeout;
+         $('.arrow', '.b-filter__item').hover(function(){
+            var  $parent = $(this).parent();
+            var dropdown = $('.b-filter__dropdown', $parent);
+            if(!dropdown.hasClass('open')){
+                filterDropTimeout = setTimeout(function(){
+                    $('.b-filter__dropdown').animate({
+                        opacity:0
+                    }, 100, function(){
+                        $(this).removeClass('open').css("display", "none");
+
+                        dropdown.css("display", "block").stop().animate({
+                            opacity:1
+                        }, 300, function(){
+                            $(this).addClass('open');
+                        });
+                    });
+                }, 500);
+            }
+        }, function(){
+            clearTimeout(filterDropTimeout);
+        });
+
+        $('.arrow', '.b-filter__item').click(function(){
+            return false;
+        });
+        /*
         * Клик по элементу быстрого фильтра
         *
         * @todo Здесь нужно сделать отправку запроса для получения
@@ -107,18 +157,23 @@
         * */
         $('.b-filter__dropdown-item').click(function(){
             var value = $(this).data('val');
-            var parent = $(this).closest('.b-filter__item');
+            var $parent = $(this).closest('.b-filter__item');
             var text = $(this).html();
-            var target = $(".arrow", parent);
-            var dropdown = $('.b-filter__dropdown', parent);
-
-            dropdown.stop().animate({
+            var $target = $(".arrow", $parent);
+            var $dropdown = $('.b-filter__dropdown', $parent);
+            var $valueEl = $('.value', $parent);
+            $dropdown.stop().animate({
                 opacity:0
             }, 300, function(){
                 $(this).removeClass('open').css("display", "none");
             });
 
-            $("<a class=\"value\" href=\"#\">"+text+"</a>").insertBefore(target);
+            if($valueEl.length){
+                $valueEl.html(text);
+            } else {
+                $("<a class=\"value\" href=\"#\">"+text+"</a>").insertBefore($target);
+            }
+
 
             /*
             * в этом месте вставить отправку.
@@ -305,9 +360,9 @@
 
             var detalisBlock = $('.b-tdetalis');
             if(detalisBlock.length){
-                setTimeout (function(){
-                    detalisBlockPositioning(detalisBlock);
-                }, parseFloat(detalisBlock.css("transition-duration"))*1000+500);
+                $('.b-tdetalis').stop().slideUp('fast', function(){
+                    $(this).remove();
+                });
             }
         }
 
@@ -354,7 +409,22 @@
                 }, 500);
             }
         }
-     });
+
+        /*
+        * Закрывает перечисленые высплывающие окна, выпадающие списки
+        *
+        * */
+       function closeSelected(){
+           var $filterDropdown = $('.b-filter__dropdown');
+           if ($filterDropdown.length){
+               $filterDropdown.stop().animate({
+                   opacity:0
+               }, 300, function(){
+                   $(this).removeClass('open').css("display", "none");
+               });
+           }
+       }
+      });
 
     $(window).load(function() {
          

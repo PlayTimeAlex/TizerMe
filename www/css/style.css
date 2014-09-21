@@ -539,6 +539,33 @@ body {
     .b-tizer-bar p .total-tizers {
       color: #095F74; }
 
+.b-tizhead {
+  padding-top: 1.5em; }
+  .b-tizhead__choose {
+    color: #72868B;
+    font-size: 2.3em;
+    padding: 1px 0 1px 41px;
+    position: relative;
+    font-weight: 300; }
+    .b-tizhead__choose:before {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 36px;
+      background: url(../images/sprite.png) no-repeat -239px 0;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .b-tizhead__find {
+    font-size: 1.5em;
+    color: #72868B;
+    font-weight: 300;
+    padding: 0.46667em 0;
+    display: inline-block; }
+    .b-tizhead__find .num {
+      color: #000;
+      font-weight: 500; }
+
 .b-tizer {
   float: left;
   min-width: 231px;
