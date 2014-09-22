@@ -3677,6 +3677,9 @@ var tooltip = $.widget( "ui.tooltip", {
         * */
         $("#expanded-filter").submit(function (e) {
             //@todo нужно передать данные фильтра сюда
+            $('.value', '.b-filter__item').remove();
+            //document.getElementById("myForm").reset(); нужно сбросить форму быстрого фильтра
+
             getTizers(addTizers, "", true);
             e.preventDefault();
         });
