@@ -128,7 +128,8 @@ body {
 
 .tizer-container {
   overflow: hidden;
-  padding: 2em 0; }
+  padding: 2em 0;
+  position: relative; }
 
 .search-container {
   padding: 2em 0 0 0;
@@ -659,3 +660,17 @@ body {
     margin-right: 15px; }
     .b-tdetalis__button:last-child {
       margin-right: 0; }
+  .b-tdetalis__arrow {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid #c0ccd0;
+    border-top: 1px solid #c0ccd0;
+    background-color: #d7dfe1;
+    margin-left: -7px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s, top 0.3s;
+    transform: rotate(45deg); }

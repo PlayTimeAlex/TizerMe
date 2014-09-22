@@ -299,7 +299,6 @@
                     $tizerPreloader.css('opacity', 1);
                     inProcess = true;
                     if(clean) $tizerContainer.html("");
-                    console.log(clean);
                 },
                 success: function(data){
                     for(var key in data) {
@@ -367,28 +366,45 @@
         }
 
         /*
+        * Добавляет ХТМЛ блока "подробнее на страницу"
+        *
+        * @param {array} массив с объектом где помещена подробная информация о тизере
+        * @param {string} идентификатор элемента после которого должеен быть вставлен блок
+        * @param {number} отступ слева для стрелки
+        * */
+        function addDetalisBlock(content, afterEl, arrowLeft){
+            $($tizerMoreTemplate.render(content)).insertAfter(afterEl).stop().slideDown('fast', function(){
+                detalisBlockPositioning($(this));
+                $('.b-tdetalis__arrow',this).css({
+                    "left" : arrowLeft,
+                    "opacity" : 1,
+                    "top" : "-6px"
+                });
+            });
+        }
+
+        /*
          * Показывает подробную информацию о тизере
          *
          * @param {object} тизер по которуму кликнули
          * */
         function showDetalisBlock(tizer) {
-            var id = tizer.attr("id");
-            var detalis = $('.b-tdetalis');
-            var insertAfterIndex = Math.ceil((tizer.index()+1)/tizerCount)*tizerCount-1;
-            var afterEl = ".b-tizer:eq("+insertAfterIndex+")";
-            var content = [tizersAll[id]];
-            console.log(content);
+            var id = tizer.attr("id"),
+                detalis = $('.b-tdetalis'),
+                insertAfterIndex = Math.ceil((tizer.index()+1)/tizerCount)*tizerCount- 1,
+                afterEl = ".b-tizer:eq("+insertAfterIndex+")",
+                content = [tizersAll[id]],
+                arrowLeft = tizer.position().left + tizer.outerWidth(true)/2;
+                (tizer.hasClass('selected')) ? tizersAll[id].addtext = deltext:  tizersAll[id].addtext = addtext;
+
             if(detalis.length){
+                if(detalis.data('id') == id) return;
                 detalis.stop().slideUp('fast', function(){
                     $(this).remove();
-                    $($tizerMoreTemplate.render(content)).insertAfter(afterEl).stop().slideDown('fast', function(){
-                        detalisBlockPositioning($(this));
-                    });
+                    addDetalisBlock(content, afterEl, arrowLeft);
                 });
             } else {
-                $($tizerMoreTemplate.render(content)).insertAfter(afterEl).stop().slideDown('fast', function(){
-                    detalisBlockPositioning($(this));
-                });
+                addDetalisBlock(content, afterEl, arrowLeft);
             }
         }
 
@@ -398,7 +414,7 @@
          * @param {object} блок "подробнее"
          * */
         function detalisBlockPositioning(block){
-            var position = block.position(),
+            var position = block.offset(),
                 winHeight,
                 blockHeight = block.outerHeight(true),
                 bottomPosition = position.top + blockHeight;

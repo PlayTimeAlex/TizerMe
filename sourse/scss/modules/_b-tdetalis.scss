@@ -50,4 +50,19 @@
             margin-right: 0;
         }
     }
+    &__arrow{
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-left: 1px solid #c0ccd0;
+        border-top: 1px solid #c0ccd0;
+        background-color: #d7dfe1;
+        margin-left: -7px;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity .3s, top .3s;
+        transform:rotate(45deg);
+    }
 }
