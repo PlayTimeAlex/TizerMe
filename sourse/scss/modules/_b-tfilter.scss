@@ -1,0 +1,87 @@
+.b-tfilter{
+    &__title{
+        color: #72868B;
+        $font-size: 14;
+        font-size: em($font-size);
+        font-weight: 500;
+        margin-bottom: em(10, $font-size);
+    }
+    &__cenzor{
+        color: rgba(0,0,0,.7);
+        font-family: "Tahoma";
+        $font-size: 12;
+        font-size: em($font-size);
+        padding-top: em(10, $font-size);
+        display: block;
+        .jq-checkbox{
+            width: 20px;
+            height: 20px;
+            background-color: #fbf6e5;
+            border-radius: 7px;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 5px;
+            position: relative;
+            &.checked{
+                .jq-checkbox__div{
+                    width: 10px;
+                    height: 10px;
+                    background-color: #ffc600;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin: -5px 0 0 -5px;
+                }
+            }
+        }
+    }
+    &__range{
+        height: 3px;
+        background-color: #fbf6e5;
+        position: relative;
+        max-width: 170px;
+        border-radius: 1px;
+        margin: 0 7px;
+        .ui-slider-range{
+            position: absolute;
+            height: 100%;
+            background-color: #ffcd21;
+        }
+        .ui-slider-handle{
+            background-color: #ffcd21;
+            border-radius: 5px;
+            width: 14px;
+            top: -6px;
+            margin-left: -7px;
+            height: 14px;
+            position: absolute;
+            display: block;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    &__range-start, &__range-finish{
+        border: 0;
+        border-bottom: 1px solid #ffcd21;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: transparent;
+        width: 44px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        color: rgba(114, 134, 139, .4);
+        font-size: 13px;
+        font-weight: 300;
+        margin: 0 5px;
+    }
+    &__range-head{
+        $font-size: 13;
+        font-size: em($font-size);
+        margin-bottom: em(15, $font-size);
+        color: #72868B;
+        font-weight: 300;
+    }
+}

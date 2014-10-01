@@ -16,7 +16,7 @@
     &__wrap {
         background-color: #fbf6e5;
         border-radius: 20px;
-        padding: em(7) em(125) em(7) em(10);
+        padding: em(7) em(125);
         max-width: 450px;
         position: relative;
         box-sizing: border-box;
@@ -50,5 +50,12 @@
         color: #72868b;
         font-weight: 500;
         padding-bottom: em(7, $font-size);
+    }
+    &__category{
+        position: absolute!important;
+        top: 5px;
+        left: 5px;
+        display: block!important;
+        width: 115px!important;
     }
 }

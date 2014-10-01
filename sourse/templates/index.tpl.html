@@ -6,15 +6,42 @@
                             <div class="b-search">
                                 <form action="/">
                                     <div class="b-search__label">Введите ключевое слово или домен</div>
-                                    <div class="b-search__wrap"><input class="b-search__field" type="text" placeholder="Ключевое слово или домен: 'Nokia, iPhone'"/>
+                                    <div class="b-search__wrap">
+                                        <select class="b-search__category pr-select" data-placeholder="Общие">
+                                            <option value="">Общие</option>
+                                            <option value="">Общие Общие</option>
+                                            <option value="">Общие Общие</option>
+                                        </select>
+                                        <input class="b-search__field" type="text"/>
                                         <button class="pr-button pr-button_yellow pr-button_small" type="submit">Найти</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div class="span5">
-                            <div class="b-umenu">
+                            <!--<div class="b-umenu">
                                 <a class="b-umenu__link b-umenu__link_profile" href="#" title="Профиль">Профиль</a><a class="b-umenu__link b-umenu__link_settings" href="#" title="Настройки">Настройки</a><a class="b-umenu__link b-umenu__link_exit" href="#" title="Выход">Выход</a>
+                            </div>-->
+                            <div class="row b-tfilter">
+                                <div class="span4">
+                                    <h4 class="b-tfilter__title">Время жизни</h4>
+                                    <div class="b-tfilter__range-head">
+                                        от <input type="text" class="b-tfilter__range-start" value="1"/> до <input type="text" class="b-tfilter__range-finish" value="365"/>
+                                    </div>
+                                    <div class="b-tfilter__range"></div>
+                                </div>
+                                <div class="span4">
+                                    <h4 class="b-tfilter__title">Выберите дату</h4>
+                                    <select class="pr-select pr-select_block">
+                                        <option value="">01.01.01 - 01.01.01</option>
+                                        <option value="">01.01.01 - 01.01.01</option>
+                                        <option value="">01.01.01 - 01.01.01</option>
+                                    </select>
+                                </div>
+                                <div class="span2">
+                                    <h4 class="b-tfilter__title">Цензура</h4>
+                                    <label class="b-tfilter__cenzor"><input type="checkbox"/> +18</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -200,58 +227,124 @@
     </script>
     <script id="tizerMoreTemplate" type="text/x-jsrender">
         <div class="b-tdetalis" data-id="{{>id}}">
+            <button class="js-close-detalis b-tdetalis__close"></button>
             <span class="b-tdetalis__arrow"></span>
             <div class="row">
-                <div class="span7">
-                    <div class="row">
-                        <div class="span3">
-                            <div class="b-tdetalis__item">
-                                <span class="title">Последнее появление:</span>
-                                <span class="data">2014-09-01</span>
+                <div class="span8">
+                    <div class="b-tdetalis__mtab-wrap js-mtab-wrap">
+                        <div class="b-tdetalis__mtab js-mtab">
+                            <a class="b-tdetalis__mtab-link js-mtab-link" href="#mtab1" title="Tools"></a>
+                            <a class="b-tdetalis__mtab-link i2 js-mtab-link" href="#mtab2" title="Statistics"></a>
+                            <a class="b-tdetalis__mtab-link i3 js-mtab-link" href="#mtab3" title="Reload"></a>
+                        </div>
+                        <div class="b-tdetalis__mtab-content js-mtab-tab" id="mtab1">
+                            <div class="row">
+                                <div class="span3">
+                                    <h2>Инфо</h2>
+                                    <div class="b-tdetalis__item">
+                                        <span class="title">Последнее появление:</span>
+                                        <span class="data">2014-09-01</span>
+                                    </div>
+                                    <div class="b-tdetalis__item">
+                                        <span class="title">Первое появление:</span>
+                                        <span class="data">2014-09-01</span>
+                                    </div>
+                                </div>
+                                <div class="span2">
+                                    <h2>Страны</h2>
+                                    <ul class="b-tdetalis__mtab-list">
+                                        <li>Россия</li>
+                                        <li>Украина</li>
+                                        <li>Казахстан</li>
+                                        <li>Америка</li>
+                                        <li>Беларусь</li>
+                                    </ul>
+                                </div>
+                                <div class="span2">
+                                    <h2>Устроиства</h2>
+                                    <ul class="b-tdetalis__mtab-list">
+                                        <li>Symbian</li>
+                                        <li>Macos</li>
+                                        <li>Iphone</li>
+                                        <li>Ipad</li>
+                                        <li>Android</li>
+                                        <li>Web</li>
+                                    </ul>
+                                </div>
+                                <div class="span3">
+                                    <h2>Тизерные сети</h2>
+                                    <div class="row">
+                                        <div class="span5">
+                                            <ul class="b-tdetalis__mtab-list">
+                                                <li>MarketGid</li>
+                                                <li>DirectAdvert</li>
+                                                <li>RedTram</li>
+                                                <li>Linkedin</li>
+                                                <li>Mosvasiti</li>
+                                                <li>Ecotechi</li>
+                                            </ul>
+                                        </div>
+                                        <div class="span5">
+                                            <ul class="b-tdetalis__mtab-list">
+                                                <li>Momonano</li>
+                                                <li>Tecolab</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="span4">
-                            <div class="b-tdetalis__item">
-                                <span class="title">Страны:</span>
-                                <span class="data">Россия,Украина</span>
+                        <div class="b-tdetalis__mtab-content js-mtab-tab" id="mtab2">
+                            <div class="b-tdetalis__smtab-wrap js-mtab-wrap">
+                                <div class="b-tdetalis__smtab js-mtab">
+                                    <a class="b-tdetalis__smtab-link active js-mtab-link" href="#smtab21">По странам</a>
+                                    <a class="b-tdetalis__smtab-link js-mtab-link" href="#smtab22">По времени</a>
+                                    <a class="b-tdetalis__smtab-link js-mtab-link" href="#smtab23">По тизерным сетям</a>
+                                    <a class="b-tdetalis__smtab-link js-mtab-link" href="#smtab24">По неделям</a>
+                                    <a class="b-tdetalis__smtab-link js-mtab-link" href="#smtab25">По месяцам</a>
+                                </div>
+                                <div class="b-tdetalis__smtab-content js-mtab-tab active" id="smtab21">
+                                    <img src="images/content/graph.jpg" />
+                                </div>
+                                <div class="b-tdetalis__smtab-content js-mtab-tab" id="smtab22">
+                                    <img src="images/content/graph.jpg" />
+                                </div>
+                                <div class="b-tdetalis__smtab-content js-mtab-tab" id="smtab23">
+                                    <img src="images/content/graph.jpg" />
+                                </div>
+                                <div class="b-tdetalis__smtab-content js-mtab-tab" id="smtab24">
+                                    <img src="images/content/graph.jpg" />
+                                </div>
+                                <div class="b-tdetalis__smtab-content js-mtab-tab" id="smtab25">
+                                    <img src="images/content/graph.jpg" />
+                                </div>
                             </div>
                         </div>
-                        <div class="span3">
-                            <div class="b-tdetalis__item">
-                                <span class="title">Время жизни:</span>
-                                <span class="data">-</span>
+                        <div class="b-tdetalis__mtab-content js-mtab-tab" id="mtab3">
+                            <div class="b-tdetalis__smtab-wrap js-mtab-wrap">
+                                <div class="b-tdetalis__smtab js-mtab">
+                                    <a class="b-tdetalis__smtab-link active js-mtab-link" href="#smtab1" title="20.09.2014">20.09.2014</a>
+                                    <a class="b-tdetalis__smtab-link js-mtab-link" href="#smtab2" title="11.01.2014">11.01.2014</a>
+                                </div>
+                                <div class="b-tdetalis__smtab-content js-mtab-tab active" id="smtab1">
+                                    <div class="b-tdetalis__reload-item">
+                                        <a class="colorbox-img" href="images/content/screenshot.jpg"><img src="images/content/tizer-image-reload.jpg" alt=""/><a>
+                                        <a href="#">http://medical-catalog.ru</a>
+                                    </div>
+                                </div>
+                                <div class="b-tdetalis__smtab-content js-mtab-tab" id="smtab2">
+                                    <div class="b-tdetalis__reload-item">
+                                        <a class="colorbox-img" href="images/content/screenshot.jpg"><img src="images/content/tizer-image-reload.jpg" alt=""/><a>
+                                        <a href="#">http://medical-catalog.ru</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="span3">
-                            <div class="b-tdetalis__item">
-                                <span class="title">Первое появление:</span>
-                                <span class="data">2014-09-01</span>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <div class="b-tdetalis__item">
-                                <span class="title">Города:</span>
-                                <span class="data">Москва,Питер,Харьков,Киев</span>
-                            </div>
-                        </div>
-                        <div class="span3">
-                            <div class="b-tdetalis__item">
-                                <span class="title">Размер:</span>
-                                <span class="data">200x200</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="span10">
-                            <button class="pr-button pr-button_green b-tdetalis__button js-add-to-projekt">{{>addtext}}</button>
-                            <button class="pr-button b-tdetalis__button js-close-detalis">Закрыть описание</button>
                         </div>
                     </div>
                 </div>
-                <div class="span3">
+                <div class="span2">
                     <img class="b-tdetalis__image" src="{{>image}}" alt="{{>name}}"/>
+                    <button class="pr-button pr-button_green pr-button_block b-tdetalis__button js-add-to-projekt">{{>addtext}}</button>
                 </div>
             </div>
         </div>
